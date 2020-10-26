@@ -51,7 +51,8 @@ sudo apt install -y scsitools --assume-yes
 echo "" >> ~/.bashrc
 echo "alias ap='ansible-playbook'" >> ~/.bashrc
 echo "alias P='cd ~/newstack_demo/ansible_playbooks'" >> ~/.bashrc
-
+#Install Helm
+sudo snap install helm --classic
 
 #Install PSO
 echo "#### Update helm repos and install PSO ####"
