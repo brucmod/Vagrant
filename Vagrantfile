@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     master.disksize.size = "25GB"
     master.vm.hostname = "master"
     master.vm.network :private_network, ip: "10.0.0.10"
-    master.vm.network :public_network, ip: "10.224.113.253"
+    master.vm.network :public_network, ip: "10.224.112.250"
     master.vm.network :public_network, ip: "10.10.10.200"
     master.vm.provision :shell, privileged: false, inline: $provision_master_node
     end
