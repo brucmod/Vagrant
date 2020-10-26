@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
   %w{node1}.each_with_index do |name, i|
     config.vm.define name do |node|
       node.vm.provider "virtualbox" do |vb|
-        vb.name = "node#{i + 250}"
+        vb.name = "node#{i + 1}"
         vb.memory = 2048
         vb.cpus = 2
       end
@@ -28,10 +28,11 @@ Vagrant.configure("2") do |config|
       node.vm.hostname = name
       node.vm.network :private_network, ip: "10.0.0.#{i + 11}"
       node.vm.network :public_network, ip: "10.224.112.#{i + 1}", bridge: "ens160"
-      node.vm.network :public_network, ip: "10.10.10.#{i + 1}", bridge: "ens192"
+      node.vm.network :public_network, ip: "10.10.10.#{i + 201}", bridge: "ens192"
 
       node.vm.provision :shell, privileged: false, inline: <<-SHELL
-sudo /vagrant/join.sh
+
+      sudo /vagrant/join.sh
 echo 'Environment="KUBELET_EXTRA_ARGS=--node-ip=10.0.0.#{i + 11}"' | sudo tee -a /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 cat /vagrant/id_rsa.pub >> /home/vagrant/.ssh/authorized_keys
 
