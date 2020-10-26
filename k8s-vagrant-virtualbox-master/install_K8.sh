@@ -11,12 +11,14 @@ echo "#####################################"
 #remove password requirement for sudo
 echo '%sudo ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
 
-#makesure all packages are updated
+echo "####  installing updates latest ansible/purestorage"
 sudo apt-get update
 sudo apt install software-properties-common
 sudo apt-add-repository ppa:ansible/ansible -y
 sudo apt install ansible --assume-yes
-
+sudo apt install python3-pip --assume-yes
+echo "#### use pip3 to install purestorage"
+pip3 install purestorage
 
 
 echo "#### Installing the Purestorage Ansible Collection  ####"
@@ -24,13 +26,13 @@ echo "#### Installing the Purestorage Ansible Collection  ####"
 ansible-galaxy collection install purestorage.flasharray
 
 
-#install Iscsi-tools
+echo '#install Iscsi-tools'
 sudo apt install open-iscsi --assume-yes
 
-#Install Multipath tools
+echo '#Install Multipath tools'
 sudo apt install multipath-tools --assume-yes
 
-#install scsi tools
+echo '#install scsi tools'
 sudo apt install -y scsitools --assume-yes
 
 
@@ -39,6 +41,5 @@ sudo apt install -y scsitools --assume-yes
 echo "" >> ~/.bashrc
 echo "alias ap='ansible-playbook'" >> ~/.bashrc
 echo "alias P='cd ~/newstack_demo/ansible_playbooks'" >> ~/.bashrc
-#Install Helm
-sudo snap install helm --classic
+
 
