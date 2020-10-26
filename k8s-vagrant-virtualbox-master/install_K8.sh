@@ -15,20 +15,8 @@ echo '%sudo ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
 sudo apt-get update
 sudo apt install software-properties-common
 sudo apt-add-repository ppa:ansible/ansible
-sudo apt update
-#install PIP3
-sudo apt install python3-pip --assume-yes
-
-# Install necessary packages, only python2 installed
-
-echo "#####################################"
-
-# Install SDK
-
-echo "####  Installing the Pure Storage SDK  ####"
-sudo apt install purestorage
 sudo apt install ansible --assume-yes
-# Install the Pure Storage collection
+
 
 
 echo "#### Installing the Purestorage Ansible Collection  ####"
@@ -53,26 +41,4 @@ echo "alias ap='ansible-playbook'" >> ~/.bashrc
 echo "alias P='cd ~/newstack_demo/ansible_playbooks'" >> ~/.bashrc
 #Install Helm
 sudo snap install helm --classic
-
-#Install PSO
-echo "#### Update helm repos and install PSO ####"
-helm repo add pure https://purestorage.github.io/helm-charts
-helm repo add stable https://kubernetes-charts.storage.googleapis.com/
-helm repo update
-helm install pure-storage-driver pure/pure-csi --namespace default -f /vagrant/k8s-vagrant-virtualbox-master/kubernetes/pso_values.yaml
-
-
-#Install PSO EXPLORER
-# Add Helm repo for PSO Explorer
-echo "#### Add, update helm repos and install PSO Explorer####"
-helm repo add pso-explorer 'https://raw.githubusercontent.com/PureStorage-OpenConnect/pso-explorer/master/'
-helm repo update
-helm search repo pso-explorer -l
-
-# Create namespace
-#kubectl create namespace psoexpl
-#kubectl create namespace demo
-
-# Install with default settings
-#helm install pso-explorer pso-explorer/pso-explorer --namespace psoexpl
 
