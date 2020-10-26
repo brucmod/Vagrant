@@ -13,10 +13,10 @@ echo '%sudo ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
 
 echo "####  installing updates latest ansible/purestorage"
 sudo apt-get update
-sudo apt install software-properties-common
+sudo apt-get install software-properties-common
 sudo apt-add-repository ppa:ansible/ansible -y
-sudo apt install ansible --assume-yes
-sudo apt install python3-pip --assume-yes
+sudo apt-get install ansible --assume-yes
+sudo apt-get install python3-pip --assume-yes
 echo "#### use pip3 to install purestorage"
 pip3 install purestorage
 
@@ -27,13 +27,13 @@ ansible-galaxy collection install purestorage.flasharray
 
 
 echo '#install Iscsi-tools'
-sudo apt install open-iscsi --assume-yes
+sudo apt-get install open-iscsi --assume-yes
 
 echo '#Install Multipath tools'
-sudo apt install multipath-tools --assume-yes
+sudo apt-get install multipath-tools --assume-yes
 
 echo '#install scsi tools'
-sudo apt install -y scsitools --assume-yes
+sudo apt-get install -y scsitools --assume-yes
 
 
 
