@@ -10,6 +10,7 @@ echo "#####################################"
 
 #remove password requirement for sudo
 echo '%sudo ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
+export DEBIAN_FRONTEND=noninteractive
 
 echo "####  installing updates latest ansible/purestorage"
 sudo apt-get update
