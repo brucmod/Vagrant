@@ -1,7 +1,8 @@
-clusterID: puretestdrive01
+
+clusterID: vagrant
 arrays:
   FlashArrays:
-    - MgmtEndPoint: "172.16.3.101"
-      APIToken: "cd6ba527-a21f-a014-d80b-13687c33402d"
-    - MgmtEndPoint: "172.16.3.111"
-      APIToken: "ff703c77-4db4-5e84-6734-b2d37acce147"
+    - MgmtEndPoint: "10.224.113.210"
+      APIToken: "b797c313-a84f-b5fe-2d41-2e5256c79c24"
+    - MgmtEndPoint: "10.224.113.211"
+      APIToken: "46be38fe-8c7f-489a-6407-b6100d0c6857"

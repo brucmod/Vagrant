@@ -63,7 +63,7 @@ sed -e "s/^.*${HOSTNAME}.*/${ADDRESS} ${HOSTNAME} ${HOSTNAME}.local/" -i /etc/ho
 sed -e '/^.*ubuntu-bionic.*/d' -i /etc/hosts
 
 # Patch OS
-apt-get update && apt-get upgrade -y
+#apt-get update && apt-get upgrade -y
 
 # Create local host entries
 echo "10.0.0.10 master" >> /etc/hosts
