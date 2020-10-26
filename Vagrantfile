@@ -131,7 +131,7 @@ echo "alias k=/usr/bin/kubectl" >> $HOME/.bash_profile
 sudo echo "alias k=/usr/bin/kubectl" >> /root/.bash_profile
 
 # Install the etcd client
-sudo apt install etcd-client
+sudo apt-get install etcd-client
 
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
