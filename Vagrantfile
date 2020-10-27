@@ -7,6 +7,8 @@ Vagrant.configure("2") do |config|
       vb.name = "master"
       vb.memory = 2048
       vb.cpus = 2
+      vb.gui = true
+      vb.customize ["modifyvm", :id, "--vram", "12"]
     end
     master.vm.box = "dajonaga/focaldesktop"
     master.disksize.size = "25GB"
