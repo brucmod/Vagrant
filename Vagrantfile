@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
       vb.cpus = 2
       
     end
-    master.vm.box = "snz/ubuntu-20.04-server"
+    master.vm.box = "ubuntu/focal64"
     #master.disksize.size = "25GB"
     master.vm.hostname = "master"
     master.vm.network :private_network, ip: "10.0.0.10"
