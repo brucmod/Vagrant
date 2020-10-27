@@ -1,5 +1,4 @@
 # k8s-vagrant-virtualbox
-Create a local kubernetes cluster using virtualbox.  A modification of the great work [danielepolencic](https://github.com/danielepolencic) did in his [gist](https://gist.github.com/danielepolencic/ef4ddb763fd9a18bf2f1eaaa2e337544).
 
 The vagrant file will do the following:
 1.  Provision all local VMs using VirtualBox
@@ -27,8 +26,8 @@ Instal [git](https://git-scm.com/downloads) if you don't already have it.
 ## Open a shell and clone
 
 ```bash
-$ git clone git@github.com:LocusInnovations/k8s-vagrant-virtualbox.git
-$ cd k8s-vagrant-virtualbox
+$ git clone https://github.com/brucmod/Vagrant
+$ cd vagrant
 ```
 
 ## Starting the cluster
