@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
       vb.memory = 2048
       vb.cpus = 2
       
-    endx
+    end
     master.vm.box = "snz/ubuntu-20.04-server"
     #master.disksize.size = "25GB"
     master.vm.hostname = "master"
