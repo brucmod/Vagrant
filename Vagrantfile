@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
       node.vm.provider "virtualbox" do |vb|
         vb.name = "node#{i + 1}"
         vb.memory = 2048
-        vb.cpus = 250
+        vb.cpus = 2
       end
       node.vm.box = "ubuntu/focal64"
       #node.disksize.size = "25GB"
