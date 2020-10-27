@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
     master.vm.hostname = "master"
     master.vm.network :private_network, ip: "10.0.0.10"
     master.vm.network :public_network, ip: "10.224.112.253", netmask: '255.255.252.0', gateway: "10.224.112.1", dns: "10.224.255.252", bridge: "ens160"
-    master.vm.network :public_network, ip: "10.10.10.200", netmask: '255.255.255.0', gateway: "10.10.10.1" bridge: "ens192"
+    master.vm.network :public_network, ip: "10.10.10.200", netmask: '255.255.255.0', gateway: "10.10.10.1", bridge: "ens192"
     master.vm.provision :shell, privileged: false, inline: $provision_master_node
     end
 
