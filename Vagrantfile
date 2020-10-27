@@ -27,8 +27,8 @@ Vagrant.configure("2") do |config|
       node.disksize.size = "25GB"
       node.vm.hostname = name
       node.vm.network :private_network, ip: "10.0.0.#{i + 11}"
-      node.vm.network :public_network, ip: "10.224.112.#{i + 1}", netmask: "255.255.252.0", bridge: "ens160"
-      node.vm.network :public_network, ip: "10.10.10.#{i + 1}", netmask: "255.255.255.0", bridge: "ens192"
+      #node.vm.network :public_network, ip: "10.224.112.#{i + 1}", netmask: "255.255.252.0", bridge: "ens160"
+      #node.vm.network :public_network, ip: "10.10.10.#{i + 1}", netmask: "255.255.255.0", bridge: "ens192"
 
       node.vm.provision :shell, privileged: false, inline: <<-SHELL
 
