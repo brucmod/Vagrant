@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :master do |master|
     master.vm.provider :virtualbox do |vb|
       vb.name = "master"
-      v.gui = true
+      vb.gui = true
       vb.memory = 2048
       vb.cpus = 2
     end
