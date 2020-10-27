@@ -7,7 +7,8 @@ Vagrant.configure("2") do |config|
       vb.memory = 2048
       vb.cpus = 2
     end
-    master.vm.box = "darkwizard242/ansibleubuntu2004"
+    master.vm.box = "dajonaga/focaldesktop"
+    master.vm.box = "gui = true"
     master.disksize.size = "25GB"
     master.vm.hostname = "master"
     master.vm.network :private_network, ip: "10.0.0.10"
