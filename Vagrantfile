@@ -2,9 +2,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, privileged: true, inline: $install_common_tools   
   config.vm.provision :shell, path: "install_K8.sh"
   config.vm.define :master do |master|
+    v.gui = true
     master.vm.provider :virtualbox do |vb|
       vb.name = "master"
-      vb.gui = true
       vb.memory = 2048
       vb.cpus = 2
     end
