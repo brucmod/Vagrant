@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
         vb.memory = 2048
         vb.cpus = 250
       end
-      node.vm.box = "darkwizard242/ansibleubuntu2004"
+      node.vm.box = "ubuntu/focal64"
       #node.disksize.size = "25GB"
       node.vm.hostname = name
       node.vm.network :private_network, ip: "10.0.0.#{i + 11}"
