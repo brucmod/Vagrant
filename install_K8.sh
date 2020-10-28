@@ -13,9 +13,9 @@ echo '%sudo ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
 export DEBIAN_FRONTEND=noninteractive
 
 echo "####  installing updates latest ansible/purestorage"
-sudo apt-add-repository ppa:ansible/ansible-2.9 -y
+#sudo apt-add-repository ppa:ansible/ansible-2.9 -y
 sudo apt-get update
-sudo apt-get install software-properties-common
+#sudo apt-get install software-properties-common
 sudo apt-get install ansible --assume-yes
 sudo apt-get install python3-pip --assume-yes
 echo "#### use pip3 to install purestorage"
