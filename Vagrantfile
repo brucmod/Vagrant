@@ -13,8 +13,8 @@ Vagrant.configure("2") do |config|
     #master.disksize.size = "25GB"
     master.vm.hostname = "master"
     master.vm.network :private_network, ip: "10.0.0.10"
-    master.vm.network :private_network, ip: "10.224.113.250", netmask: "255.255.252.0"
-    master.vm.network :private_network, ip: "10.10.11.200", netmask: "255.255.255.0"
+    master.vm.network :private_network, ip: "11.224.113.250", netmask: "255.255.252.0"
+    master.vm.network :private_network, ip: "11.10.11.200", netmask: "255.255.255.0"
     master.vm.provision :shell, privileged: false, inline: $provision_master_node
     end
 
