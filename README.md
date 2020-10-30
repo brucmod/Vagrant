@@ -1,4 +1,4 @@
-# k8s-vagrant-virtualbox
+# Lab_demo
 
 The vagrant file will do the following:
 1.  Provision all local VMs using VirtualBox
@@ -26,8 +26,8 @@ Instal [git](https://git-scm.com/downloads) if you don't already have it.
 ## Open a shell and clone
 
 ```bash
-$ git clone https://github.com/brucmod/Vagrant
-$ cd vagrant
+$ git clone https://github.com/brucmod/lab_demo
+$ cd lab_demo
 ```
 
 ## Starting the cluster
@@ -75,3 +75,8 @@ $ ssh node1
 $ ssh node2
 $ ssh node3
 ```
+once all 4 nodes are up - ssh into master node and then download demo repo
+git clone http://github.com/brucmod/lab_demo_post
+cd lab_demo_post
+
+run demos in order in kubernetes folder and playbooks folder
