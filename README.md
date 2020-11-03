@@ -1,4 +1,4 @@
-# Lab_demo
+# Lab_demo_version 1.1
 
 The vagrant file will do the following:
 1.  Provision all local VMs using VirtualBox
